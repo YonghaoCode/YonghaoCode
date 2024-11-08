@@ -1,5 +1,8 @@
-# Yonghao Xu @ Columbia University in New York City
--**[Bacholar of Science, Statistics, Michigan State University][(https://stt.natsci.msu.edu/)], class of 2022**
+# Yonghao Xu 
+![Your Alt Text](images/photo.jpg)
+
+-**[Master of science, Statistics, Columbia University](https://stat.columbia.edu/ma-programs/), class of 2024**
+-**[Bacholar of Science, Statistics, Michigan State University](https://stt.natsci.msu.edu/), class of 2022**
 
 ## Research Interests
 Large Language Models (LLMs): Pretraining, distributed GPU optimization, and alignment techniques such as SFT and RLHF.
