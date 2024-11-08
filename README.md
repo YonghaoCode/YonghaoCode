@@ -1,5 +1,5 @@
 # Yonghao Xu 
-![Your Alt Text](images/photo.jpg)
+![浩的照片](截屏2024-02-18 15.46.52.png)
 
 -**[Master of science, Statistics, Columbia University](https://stat.columbia.edu/ma-programs/), class of 2024**
 -**[Bacholar of Science, Statistics, Michigan State University](https://stt.natsci.msu.edu/), class of 2022**
