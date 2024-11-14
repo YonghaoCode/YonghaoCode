@@ -1,0 +1,55 @@
+CNN Project Summary
+English Version
+Project Title: Building and Fine-Tuning a CNN Using MobileNetV2 with Transfer Learning
+
+Objective:
+The project aims to classify flower images from the Oxford 102 Flower dataset using a Convolutional Neural Network (CNN). We started by implementing a custom CNN, moved on to transfer learning using MobileNetV2, and progressively fine-tuned the model to improve accuracy. Along the way, we explored key principles and definitions that improved our understanding of deep learning.
+
+Key Steps and Progressive Refinements:
+
+Data Preprocessing:
+
+What we did: Loaded and preprocessed the Oxford 102 Flower dataset by resizing images to 224x224 (to match MobileNetV2's input) and normalizing pixel values. We split the dataset into training and testing sets.
+Improvement: Ensured consistent image sizes for compatibility with the CNN and applied transformations to reduce overfitting and enhance generalization.
+Custom CNN Implementation:
+
+What we did: Built a custom CNN architecture with Conv2D, ReLU, MaxPooling, Flatten, and fully connected layers. We optimized it using CrossEntropyLoss and the Adam optimizer.
+Limitation: Although the model performed well on the training set, its accuracy on the test set plateaued, indicating room for improvement.
+Key Takeaway: Custom CNNs are a good starting point but may require large datasets and careful tuning to achieve optimal performance.
+Transfer Learning with MobileNetV2:
+
+What we did: Leveraged the pre-trained MobileNetV2 model, replaced the classifier with custom layers, and froze all pre-trained layers. Initially, we trained only the newly added layers.
+Improvement: Achieved higher accuracy with fewer training epochs due to the rich feature extraction capabilities of MobileNetV2.
+Key Takeaway: Transfer learning is efficient for smaller datasets as it reuses pre-trained features, reducing training time and computational cost.
+Fine-Tuning the Model:
+
+What we did: Unfroze the deeper layers of MobileNetV2 and fine-tuned the network by reducing the learning rate and training for additional epochs.
+Improvement: Test accuracy increased significantly (from ~57% to ~79%). Fine-tuning allowed the model to adapt its high-level features to the specific flower dataset.
+Key Takeaway: Selective layer unfreezing and careful adjustment of hyperparameters are critical for maximizing transfer learning performance.
+Performance Optimization:
+
+What we did: Experimented with hyperparameters such as learning rate, batch size, and optimizer settings. Incorporated a learning rate scheduler (StepLR) to dynamically adjust learning rates during training.
+Improvement: Reduced overfitting and improved convergence, achieving a balanced trade-off between accuracy and loss on the test set.
+Definitions and Patterns Learned Today:
+
+Batch: A subset of the dataset processed in one forward and backward pass. Larger batch sizes stabilize gradient updates but require more memory, while smaller batches introduce noise but improve regularization.
+
+Epoch: A complete pass through the training dataset. Multiple epochs allow the model to refine its parameters iteratively.
+
+Transfer Learning: Reusing a pre-trained model on a new task. It significantly reduces training time and works well when the source and target domains share similar features.
+
+Learning Rate: A critical hyperparameter that determines the step size for updating weights. Smaller learning rates improve convergence during fine-tuning, while larger ones speed up initial learning.
+
+Fine-Tuning: A method to adapt a pre-trained model by unfreezing specific layers and retraining them on new data. It combines the efficiency of transfer learning with the flexibility of task-specific adjustments.
+
+MobileNetV2's Depthwise Separable Convolutions: Efficient convolution operations that reduce computation by separating spatial and channel operations, making it ideal for mobile devices.
+
+Summary of Today's Progress:
+
+Began with a custom CNN to understand the basics of image classification.
+Transitioned to transfer learning using MobileNetV2, improving accuracy and reducing training time.
+Fine-tuned the model by unfreezing layers, lowering the learning rate, and adjusting hyperparameters.
+Learned the importance of batch size, epochs, learning rate schedules, and selective fine-tuning in optimizing performance.
+Achieved a test accuracy of 79.04% through consistent refinement.
+Final Thought:
+This project highlights the iterative nature of deep learning workflows. Each step—preprocessing, architecture design, transfer learning, and fine-tuning—builds on the previous one, combining theoretical understanding with practical application to achieve high-performance models.
